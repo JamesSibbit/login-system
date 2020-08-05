@@ -28,8 +28,6 @@ def hashpassword(password):
     hash_pass.update(password.encode())
     return hash_pass.hexdigest()
 
-print(hashpassword("sibbit"))
-
 cursor.execute("CREATE DATABASE IF NOT EXISTS user_pass")
 cursor.execute("USE user_pass")
 cursor.execute("CREATE TABLE IF NOT EXISTS user_pass_table (id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, username TEXT, password TEXT)")
